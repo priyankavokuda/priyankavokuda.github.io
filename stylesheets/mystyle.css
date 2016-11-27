@@ -56,3 +56,23 @@
     width: 150px;
     height: 150px;
 }
+.linkedin{
+  background: url(../images/linkedin-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+}
+.githubicon{
+  background: url(../images/github-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+}
+.mail{
+  background: url(../images/mail-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+}
+
+
