@@ -15,7 +15,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: ##ffffff ;
     display: block;
     transition: 0.3s
 }
@@ -61,18 +61,63 @@
   width: 65px;
   height: 65px;
   display: block;
+  display: inline-block
 }
 .githubicon{
   background: url(../images/github-icon.png) no-repeat  center;
   width: 65px;
   height: 65px;
   display: block;
-}
-.mail{
-  background: url(../images/mail-icon.png) no-repeat  center;
-  width: 65px;
-  height: 65px;
-  display: block;
+  display: inline-block
 }
 
+.githubicon:hover {
+	width: 75px;
+  height: 75px;
+}
+.linkedin:hover {
+	width: 75px;
+  height: 75px;
+}
+
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+#cv { display: none; }​
+
+#contact {display: none;}
 

@@ -13,25 +13,22 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+
+
+  <body onload="hideDiv()">
     <div class="wrapper">
       <header>
         <h1 class="header">Priyanka Vokuda</h1>
         <p class="header"></p>
-<!--<img align="left" src="images/myphoto.png" width="100" height="100" />-->
-<p>
-<img class="img-circle" src="images/myphoto.png">
-</p>
-
-       <!-- <ul>
-          <li><a class="buttons github" href="https://github.com/priyankavokuda"></a></li>
-        </ul> -->
+	<p>
+	<img class="img-circle" src="images/myphoto.png">
+	</p>
 
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Curriculum Vitae</a>
-  <!-- <a href="#">Contact</a> -->
+  <a href="javascript:hideDiv()" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:showCVDiv()";>Curriculum Vitae</a>
+  <a href="javascript:showContactDiv()">Contact</a> 
 </div>
 
 
@@ -45,6 +42,23 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+function showCVDiv() {
+    div = document.getElementById('cv');
+    document.getElementById("contact").style.display = 'none';
+    div.style.display = "block";
+}
+function showContactDiv() {
+    div = document.getElementById('contact');
+    document.getElementById("cv").style.display = 'none';
+    div.style.display = "block";
+}
+function hideDiv() {
+	document.getElementById("cv").style.display = 'none';
+	document.getElementById("contact").style.display = 'none';
+	void(0)
+}
+
 </script>
 
 
@@ -52,19 +66,30 @@ function closeNav() {
 
       </header>
       <section>
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to my homepage.</h3>
+        
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><center><h1>Welcome to my homepage <span class="tab blink">.</span></h1></center>
+<center>
+<p>I am a Masters student in Autonomous Systems at Bonn-Rhein-Sieg University of Applied Sciences.</br> I am a Machine learning enthusiast. This is my portfolio.</p>
 
-<p>I am a Masters student in Autonomous Systems at Bonn-Rhein-Sieg University of Applied Sciences. I am a Machine learning enthusiast. This is my portfolio.</p>
-<div class="control-group">
-     <div class="controls align-right">
           <a class="githubicon" href="https://github.com/priyankavokuda"></a>
 	 <a class="linkedin" href="https://www.linkedin.com/in/priyanka-vokuda-4ab4462a"></a>
-<a class="mail" href="mailto:priyankavokuda@gmail.com"></a>
-  </div>
+
+<div id="cv">
+	<embed src="documents/VokudaCV.pdf" width="550" height="475" type='application/pdf'>
 </div>
 
+<div id="contact">
+	<form action="http://formspree.io/priyankavokuda@gmail.com" method="POST">
+	Your name:<br>
+    <input name="name" size="30" type="text"><br> Your email:<br>
+    <input name="_replyto" size="30" type="email"><br> Your message:<br>
+    <textarea name="message" rows="7" cols="30">
+    </textarea><br>
+    <input value="Send email" type="submit">
+    </form>
 
+</div>
+</center>
      <!-- <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer> -->
