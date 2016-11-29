@@ -28,11 +28,12 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:hideDiv()" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="javascript:showCVDiv()";>Curriculum Vitae</a>
+<a href="javascript:showProjDiv()">Projects</a> 
   <a href="javascript:showContactDiv()">Contact</a> 
 </div>
 
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
 <script>
 function openNav() {
@@ -46,18 +47,56 @@ function closeNav() {
 function showCVDiv() {
     div = document.getElementById('cv');
     document.getElementById("contact").style.display = 'none';
+document.getElementById("proj").style.display = 'none';
     div.style.display = "block";
 }
 function showContactDiv() {
     div = document.getElementById('contact');
     document.getElementById("cv").style.display = 'none';
+document.getElementById("proj").style.display = 'none';
+    div.style.display = "block";
+}
+function showProjDiv() {
+    div = document.getElementById('proj');
+    currentSlide(1)
+    document.getElementById("cv").style.display = 'none';
+	document.getElementById("contact").style.display = 'none';
     div.style.display = "block";
 }
 function hideDiv() {
 	document.getElementById("cv").style.display = 'none';
 	document.getElementById("contact").style.display = 'none';
+document.getElementById("proj").style.display = 'none';
 	void(0)
 }
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
 
 </script>
 
@@ -87,6 +126,33 @@ function hideDiv() {
 	<input class="submit" type="submit" value="Send">
 </form>
 
+</div>
+
+<!--<div>
+<img src="images/handmotion.gif" alt="HTML5 Icon" style="width:350px;height:250px;">
+<a class="handmotion" href="https://github.com/priyankavokuda/hand-motion-analysis">Hand motion analysis</a>
+<a class="tourist" href="https://github.com/priyankavokuda/find-tourism-theme">Find tourist theme</a>
+</div> -->
+
+<div id="proj">
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 2</div>
+		  <a class="handmotion" href="https://github.com/priyankavokuda/hand-motion-analysis"></a>
+		  <div class="text">Hand motion analysis</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 2</div>
+		  <a class="tourist" href="https://github.com/priyankavokuda/find-tourism-theme"></a>
+		  <div class="text">Find tourist theme</div>
+		</div>
+	</div>
+	<br>
+	<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+	</div>
 </div>
 </center>
      <!-- <footer>
