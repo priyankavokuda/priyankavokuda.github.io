@@ -1,159 +1,143 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Priyanka Vokuda</title>
-<link rel="stylesheet" href="stylesheets/mystyle.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>Priyanka Vokuda</title>
+		<link rel="stylesheet" href="stylesheets/mystyle.css">
+		<link rel="stylesheet" href="stylesheets/styles.css">
+		<link rel="stylesheet" href="stylesheets/github-light.css">
+		<script src="javascripts/scale.fix.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
 
+	<body onload="hideDiv();">
+    		<div class="wrapper">
+			<header>
+				<h1 class="header">Priyanka Vokuda</h1>
+				<p class="header"></p>
+				<p><img class="img-circle" src="images/myphoto.png"></p>
+				<!-- Side navigation --> 
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:hideDiv()" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="javascript:showProjDiv()">Projects</a> 
+					<a href="javascript:showCVDiv()";>Curriculum Vitae</a>
+					<a href="javascript:showContactDiv()">Contact</a> 
+				</div>
+				<span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+			</header>
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+			}
 
-  <body onload="hideDiv()">
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Priyanka Vokuda</h1>
-        <p class="header"></p>
-	<p>
-	<img class="img-circle" src="images/myphoto.png">
-	</p>
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+			}
+			function showCVDiv() {
+				div = document.getElementById('cv');
+				document.getElementById("contact").style.display = 'none';
+				document.getElementById("proj").style.display = 'none';
+				div.style.display = "block";
+				document.getElementById("mySidenav").style.width = "0";
+			}
+			function showContactDiv() {
+				div = document.getElementById('contact');
+				document.getElementById("cv").style.display = 'none';
+				document.getElementById("proj").style.display = 'none';
+				div.style.display = "block";
+				document.getElementById("mySidenav").style.width = "0";
+			}
+			function showProjDiv() {
+				div = document.getElementById('proj');
+				currentSlide(1)
+				document.getElementById("cv").style.display = 'none';
+				document.getElementById("contact").style.display = 'none';
+				div.style.display = "block";
+				document.getElementById("mySidenav").style.width = "0";
+			}
+			function hideDiv() {
+				document.getElementById("cv").style.display = 'none';
+				document.getElementById("contact").style.display = 'none';
+				document.getElementById("proj").style.display = 'none';
+				void(0)
+			}
 
+			var slideIndex = 1;
+			showSlides(slideIndex);
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:hideDiv()" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="javascript:showCVDiv()";>Curriculum Vitae</a>
-<a href="javascript:showProjDiv()">Projects</a> 
-  <a href="javascript:showContactDiv()">Contact</a> 
-</div>
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
 
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
 
-<span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-function showCVDiv() {
-    div = document.getElementById('cv');
-    document.getElementById("contact").style.display = 'none';
-document.getElementById("proj").style.display = 'none';
-    div.style.display = "block";
-}
-function showContactDiv() {
-    div = document.getElementById('contact');
-    document.getElementById("cv").style.display = 'none';
-document.getElementById("proj").style.display = 'none';
-    div.style.display = "block";
-}
-function showProjDiv() {
-    div = document.getElementById('proj');
-    currentSlide(1)
-    document.getElementById("cv").style.display = 'none';
-	document.getElementById("contact").style.display = 'none';
-    div.style.display = "block";
-}
-function hideDiv() {
-	document.getElementById("cv").style.display = 'none';
-	document.getElementById("contact").style.display = 'none';
-document.getElementById("proj").style.display = 'none';
-	void(0)
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-
-</script>
-
-
-
-
-      </header>
-      <section>
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
+      		<section>
         
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><center><h1>Welcome to my homepage <span class="tab blink">.</span></h1></center>
-<center>
-<p>I am a Masters student in Autonomous Systems at
-<a href="https://www.h-brs.de/en/inf/autonomous-systems-msc"> Bonn-Rhein-Sieg University of Applied Sciences.</a> </br> I am a Machine learning enthusiast. This is my portfolio.</p>
+		<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" 			class="octicon octicon-link"></span></a>
+		<center><h1>Welcome to my homepage <span class="tab blink">.</span></h1></center>
+		<center>
+			<p>I am a Masters student in Autonomous Systems at
+			<a href="https://www.h-brs.de/en/inf/autonomous-systems-msc"> Bonn-Rhein-Sieg University of Applied Sciences.</a> 
+			</br>I am a Machine learning enthusiast. This is my portfolio.</p>
+			<a class="githubicon" href="https://github.com/priyankavokuda"></a>
+			<a class="linkedin" href="https://www.linkedin.com/in/priyanka-vokuda-4ab4462a"></a>
 
-          <a class="githubicon" href="https://github.com/priyankavokuda"></a>
-	 <a class="linkedin" href="https://www.linkedin.com/in/priyanka-vokuda-4ab4462a"></a>
-
-<div id="cv">
-	<embed src="documents/VokudaCV.pdf" width="550" height="475" type='application/pdf'>
-</div>
-
-<div id="contact">
-	<form  action="//formspree.io/priyankavokuda@gmail.com" method="post">
-	<input type="text" name="Name" placeholder="Name" required></br>
-	<input type="email" name="Email" placeholder="Email" required></br>
-	<textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea></br>
-	<input class="submit" type="submit" value="Send">
-</form>
-
-</div>
-
-<!--<div>
-<img src="images/handmotion.gif" alt="HTML5 Icon" style="width:350px;height:250px;">
-<a class="handmotion" href="https://github.com/priyankavokuda/hand-motion-analysis">Hand motion analysis</a>
-<a class="tourist" href="https://github.com/priyankavokuda/find-tourism-theme">Find tourist theme</a>
-</div> -->
-
-<div id="proj">
-	<div class="slideshow-container">
-		<div class="mySlides fade">
-		  <div class="numbertext">1 / 2</div>
-		  <a class="handmotion" href="https://github.com/priyankavokuda/hand-motion-analysis">Hand motion analysis</a>
+		<div id="cv">
+			<embed src="documents/VokudaCV.pdf" width="550" height="475" type='application/pdf'>
 		</div>
 
-		<div class="mySlides fade">
-		  <div class="numbertext">2 / 2</div>
-		  <a class="tourist" href="https://github.com/priyankavokuda/find-tourism-theme">Find tourist theme</a>
+		<div id="contact">
+			<form  action="//formspree.io/priyankavokuda@gmail.com" method="post">
+				<input type="text" name="Name" placeholder="Name" required></br>
+				<input type="email" name="Email" placeholder="Email" required></br>
+				<textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea></br>
+				<input class="submit" type="submit" value="Send">
+			</form>
 		</div>
-<a class="next" onclick="plusSlides(1)">❯</a>
-	</div>
-	<br>
-	<div style="text-align:center">
-		  <span class="dot" onclick="currentSlide(1)"></span> 
-		  <span class="dot" onclick="currentSlide(2)"></span> 
-	</div>
-</div>
-</center>
+
+		<div id="proj">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+				  <div class="numbertext">1 / 2</div>
+				  <a class="handmotion" href="https://github.com/priyankavokuda/hand-motion-analysis">Hand motion analysis</a>
+				</div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">2 / 2</div>
+				  <a class="tourist" href="https://github.com/priyankavokuda/find-tourism-theme">Find tourist theme</a>
+				</div>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+			</div>
+			<br>
+			<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+			</div>
+		</div>
+
+
      <!-- <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer> 

@@ -117,12 +117,10 @@
 	50.01% { opacity: 0; }
 	100% { opacity: 0; }
 }
-#cv { display: none; }​
 
-#contact {display: none;}
 
 #menu:hover {
-	font-size: 100px
+	text-shadow: 2px 2px 5px grey;
 }
 
 .handmotion{
@@ -233,3 +231,5 @@
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+
