@@ -78,19 +78,19 @@
 			}
 
 			function showSlides(n) {
-			  var i;
-			  var slides = document.getElementsByClassName("mySlides");
-			  var dots = document.getElementsByClassName("dot");
-			  if (n > slides.length) {slideIndex = 1}    
-			  if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-			      slides[i].style.display = "none";  
-			  }
-			  for (i = 0; i < dots.length; i++) {
-			      dots[i].className = dots[i].className.replace(" active", "");
-			  }
-			  slides[slideIndex-1].style.display = "block";  
-			  dots[slideIndex-1].className += " active";
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
 			}
 		</script>
       		<section>
@@ -109,6 +109,7 @@
 		</div>
 
 		<div id="contact">
+			Get in Touch!
 			<form  action="//formspree.io/priyankavokuda@gmail.com" method="post">
 				<input type="text" name="Name" placeholder="Name" required></br>
 				<input type="email" name="Email" placeholder="Email" required></br>
@@ -128,7 +129,7 @@
 				  <div class="numbertext">2 / 2</div>
 				  <a class="tourist" href="https://github.com/priyankavokuda/find-tourism-theme">Find tourist theme</a>
 				</div>
-				<a class="next" onclick="plusSlides(1)">❯</a>
+				<a class="next" onclick="plusSlides(1)">Next</a>
 			</div>
 			<br>
 			<div style="text-align:center">
