@@ -139,6 +139,30 @@
   display: inline-block
 }
 
+.rgbd{
+ background: url(../images/rgbd.jpeg) no-repeat  center;
+   width:495px;
+  height:360px;
+  display: block;
+  display: inline-block
+}
+
+.hough{
+ background: url(../images/hough_forest.png) no-repeat  center;
+   width:495px;
+  height:360px;
+  display: block;
+  display: inline-block
+}
+
+.interactive{
+ background: url(../images/interactive_detection.PNG) no-repeat  center;
+   width:495px;
+  height:360px;
+  display: block;
+  display: inline-block
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
