@@ -80,6 +80,46 @@
   height: 75px;
 }
 
+.xing{
+  background: url(../images/xing-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+  display: inline-block
+}
+
+.xing:hover {
+	width: 75px;
+  height: 75px;
+}
+
+.instagram{
+  background: url(../images/instagram-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+  display: inline-block
+}
+
+.instagram:hover {
+	width: 75px;
+  height: 75px;
+}
+
+.medium{
+  background: url(../images/medium-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+  display: inline-block
+}
+
+.medium:hover {
+	width: 75px;
+  height: 75px;
+}
+
+
 .blink {
 	-webkit-animation: blink .75s linear infinite;
 	-moz-animation: blink .75s linear infinite;
@@ -243,12 +283,12 @@ position: relative;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -256,5 +296,3 @@ position: relative;
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
-
