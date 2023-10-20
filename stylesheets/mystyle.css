@@ -56,6 +56,13 @@
     width: 150px;
     height: 150px;
 }
+.projectsicon{
+  background: url(../images/project-icon.png) no-repeat  center;
+  width: 65px;
+  height: 65px;
+  display: block;
+  display: inline-block
+}
 .linkedin{
   background: url(../images/linkedin-icon.png) no-repeat  center;
   width: 65px;
@@ -71,6 +78,10 @@
   display: inline-block
 }
 
+.projectsicon:hover {
+	width: 75px;
+  height: 75px;
+}
 .githubicon:hover {
 	width: 75px;
   height: 75px;
@@ -87,6 +98,7 @@
   display: block;
   display: inline-block
 }
+
 
 .xing:hover {
 	width: 75px;
